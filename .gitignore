@@ -1,0 +1,33 @@
+# Binaries
+*.exe
+*.out
+*.test
+
+# Go build artifacts
+bin/
+*.a
+*.o
+*.so
+
+# Dependency directories (Auto-managed by Go modules)
+vendor/
+go.sum
+
+# Editor & OS files
+*.swp
+*.swo
+*.DS_Store
+*.vscode/
+*.idea/
+*.log
+
+# Go module cache
+pkg/
+go-build/
+
+# Coverage & test results
+*.cover
+*.test
+cover.out
+coverage/
+link.txt

@@ -1,0 +1,11 @@
+level: debug
+encoding: console
+outputPath: logs/app.log
+sampling:
+  initial: 100
+  thereafter: 100
+rotation:
+  maxSize: 100         # MB
+  maxBackups: 5
+  maxAge: 30           # Days
+  compress: true
