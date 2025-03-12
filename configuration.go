@@ -1,4 +1,4 @@
-package main
+package zap_h8
 
 import (
 	"fmt"
