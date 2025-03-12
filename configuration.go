@@ -120,11 +120,16 @@ func GetLogger(configPath string) (*zap.Logger, error) {
 			return
 		}
 		logger = cfg.buildLogger()
-		logger.Info("Logger initialized",
-			zap.String("level", cfg.Level),
-			zap.Bool("development", cfg.Development),
-			zap.String("output_path", cfg.OutputPath),
-		)
+		if logger != nil {
+			logger.Info("Logger initialized",
+				zap.String("level", cfg.Level),
+				zap.Bool("development", cfg.Development),
+				zap.String("output_path", cfg.OutputPath),
+			)
+		} else {
+			fmt.Println("Failed to create logger")
+			return
+		}
 	})
 
 	if initErr != nil {
