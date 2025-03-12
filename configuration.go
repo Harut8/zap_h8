@@ -13,7 +13,7 @@ import (
 )
 
 var (
-	atomicLevel zap.AtomicLevel
+	atomicLevel = zap.NewAtomicLevel()
 	once        sync.Once
 	logger      *zap.Logger
 )
